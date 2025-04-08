@@ -22,6 +22,8 @@ module tt_um_muncherkin_lioncage (
     // use bidirectionals as outputs
     assign uio_oe = 8'b11111111;
 
+    wire _unused =&{ena, ui_in[7:4], ui_in[1:0], uio_in[7:0]};
+
     //Max 15 lions
     reg [3:0] lion_counter;
     reg state;

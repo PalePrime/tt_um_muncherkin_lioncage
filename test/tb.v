@@ -31,8 +31,8 @@ module tb ();
     tt_um_muncherkin_lioncage tt_um_muncherkin_lioncage (
     // include power ports for the Gate Level test
     `ifdef GL_TEST
-        .VPWR( 1'b1),
-        .VGND( 1'b0),
+        .VPWR(VPWR),
+        .VGND(VGND),
     `endif
         .ui_in      (ui_in),    // Dedicated inputs
         .uo_out     (uo_out),   // Dedicated outputs
@@ -42,6 +42,6 @@ module tb ();
         .ena        (ena),      // enable - goes high when design is selected
         .clk        (clk),      // clock
         .rst_n      (rst_n)     // not reset
-        );
+    );
 
 endmodule
